@@ -1,0 +1,29 @@
+<div id="landingWrapper" class="container-fluid">
+    <div class="row textWrapperRow">
+        <div class="d-none d-sm-block col">
+            <p class="brandText googleText">Google</p>
+        </div>
+        <div class="col imgWrapper">
+            <p class="googleG">G</p>
+        </div>
+    </div>
+    <div class="row textWrapperRow">
+        <div class="col imgWrapper">
+            <img src="/assets/imgs/github-logo.png" class="text-center brandImg">
+        </div>
+        <div class="d-none d-sm-block col">
+            
+            <p class="brandText">Repos</p>
+        </div>
+    </div>
+</div>
+
+<div class="modalContainer">
+    <h1 id="landingUserNameLabel">Enter User Name</h1>
+    <p id="welcomePageUserNameErrorMessage" class="userNameErrorMessage">Invalid user name!</p>
+    <input type="text" #usernameInput id="usernameInput" name="usernameInput" placeholder="User Name" class="form-control" (keyup)="validateUsername(usernameInput.value)" (blur)="onUsernameInputBlur(usernameInput.value)" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    <button type="button" id="landingBtnContinue" class="btn btn-success landingBtn" [disabled]="true" [routerLink]="['/home']">Continue</button>
+    <h3>or</h3>
+    <button type="button" class="btn btn-primary landingBtn" [routerLink]="['/home']">Skip User Name</button>
+</div>
+<div class="modalOverlay"></div>
